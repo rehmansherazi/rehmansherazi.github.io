@@ -18,6 +18,30 @@
   --tag-bg:#f0f0eb;
   --tag-text:#444;
 }
+[data-theme="dark"]{
+  --bg:#0f0f0f;
+  --surface:#1a1a1a;
+  --border:#2a2a2a;
+  --text:#e8e8e8;
+  --muted:#999;
+  --accent:#1D9E75;
+  --accent-light:#0d3d2e;
+  --tag-bg:#222;
+  --tag-text:#bbb;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]):not([data-theme="dark"]){
+    --bg:#0f0f0f;
+    --surface:#1a1a1a;
+    --border:#2a2a2a;
+    --text:#e8e8e8;
+    --muted:#999;
+    --accent:#1D9E75;
+    --accent-light:#0d3d2e;
+    --tag-bg:#222;
+    --tag-text:#bbb;
+  }
+}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:16px}
 a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
@@ -78,6 +102,10 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
   text-decoration: none;
 }
 
+.theme-toggle{position:fixed;top:1rem;right:1.5rem;display:flex;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:3px;z-index:100}
+.theme-btn{padding:3px 10px;font-size:0.72rem;border:none;border-radius:4px;cursor:pointer;background:transparent;color:var(--muted);font-family:inherit;transition:all 0.15s}
+.theme-btn.active{background:var(--accent);color:#ffffff}
+.theme-btn:hover:not(.active){background:var(--border);color:var(--text)}
 @media(max-width:600px){
   .name{font-size:1.5rem}
   .meta{gap:0.75rem}
@@ -87,6 +115,12 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 </style>
 </head>
 <body>
+
+<div id="theme-toggle" class="theme-toggle">
+  <button onclick="setTheme('auto')" id="btn-auto" class="theme-btn active" title="Auto (system)">Auto</button>
+  <button onclick="setTheme('light')" id="btn-light" class="theme-btn" title="Light mode">Light</button>
+  <button onclick="setTheme('dark')" id="btn-dark" class="theme-btn" title="Dark mode">Dark</button>
+</div>
 
 <header>
 <div class="container">
@@ -261,5 +295,27 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
   Rahman Sherazi · Ontario, Canada · Open to remote and hybrid opportunities
 </footer>
 
+<script>
+function setTheme(theme) {
+  if (theme === 'auto') {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.removeItem('theme');
+  } else {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }
+  document.querySelectorAll('.theme-btn').forEach(function(btn) {
+    btn.classList.toggle('active', btn.id === 'btn-' + theme);
+  });
+}
+(function() {
+  var saved = localStorage.getItem('theme');
+  if (saved === 'light' || saved === 'dark') {
+    setTheme(saved);
+  } else {
+    setTheme('auto');
+  }
+})();
+</script>
 </body>
 </html>
