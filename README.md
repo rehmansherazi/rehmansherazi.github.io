@@ -11,14 +11,14 @@ Ontario, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehm
 
 ## Projects
 
-### [JobMatch](https://github.com/rehmansherazi/jobmatch)
+### [JobMatch]*(in development)*
 AI-powered job discovery and resume tailoring pipeline. Fetches jobs from Adzuna and direct job boards, scores them against your resume using local TF-IDF and domain overlap scoring, and generates ATS-tailored resumes via Claude API. Fully self-hostable with a FastAPI dashboard, Docker packaging, user accounts, and run quota management.
 
 `Python` `FastAPI` `SQLite` `SQLAlchemy` `Claude API` `Adzuna API` `Docker` `JWT`
 
 ---
 
-### SyncBridge *(in development)*
+### [SyncBridge](https://github.com/rehmansherazi/syncbridge)
 Cross-platform IDE-to-browser toolchain that bridges local developer workspaces with web-based LLM chat interfaces. Syncs state and execution hooks between a local VS Code extension and a custom Chrome extension.
 
 `Node.js` `TypeScript` `VS Code Extension API` `Chrome Extension`
