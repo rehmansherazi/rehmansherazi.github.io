@@ -1,6 +1,6 @@
 # Rahman Sherazi
 
-**Senior DevOps · SRE · Platform · Cloud · AI Engineer**
+**Senior DevOps · SRE · Platform · Cloud · Infrastructure · Systems · AI Engineer**
 Ontario, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehmansherazi@gmail.com
 
 ---
