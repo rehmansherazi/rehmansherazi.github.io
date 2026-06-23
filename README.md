@@ -11,7 +11,7 @@ Ontario, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehm
 
 ## Projects
 
-### [JobMatch]*(in development)*
+### [JobMatch](https://github.com/rehmansherazi/jobmatch) *(in development)*
 AI-powered job discovery and resume tailoring pipeline. Fetches jobs from Adzuna and direct job boards, scores them against your resume using local TF-IDF and domain overlap scoring, and generates ATS-tailored resumes via Claude API. Fully self-hostable with a FastAPI dashboard, Docker packaging, user accounts, and run quota management.
 
 `Python` `FastAPI` `SQLite` `SQLAlchemy` `Claude API` `Adzuna API` `Docker` `JWT`
