@@ -5,6 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rahman Sherazi — Senior DevOps · SRE · Platform · Cloud · AI/MLOps · Infrastructure · Systems Engineer</title>
 <meta name="description" content="Senior DevOps, SRE, Platform, Cloud, AI/MLOps, Infrastructure and Systems Engineer based in Ontario, Canada. 20+ years building large-scale infrastructure.">
+<meta name="author" content="Rahman Sherazi">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="DevOps Engineer, SRE, Platform Engineer, Cloud Engineer, Kubernetes, AWS, Terraform, Infrastructure, Rahman Sherazi, Ontario Canada">
+<link rel="canonical" href="https://rehmansherazi.github.io">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://rehmansherazi.github.io">
+<meta property="og:title" content="Rahman Sherazi — Senior DevOps · SRE · Platform · Cloud Engineer">
+<meta property="og:description" content="Senior DevOps, SRE, Platform, Cloud, AI/MLOps, Infrastructure and Systems Engineer based in Ontario, Canada. 20+ years building large-scale infrastructure.">
+<meta property="og:site_name" content="Rahman Sherazi">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Rahman Sherazi — Senior DevOps · SRE · Platform · Cloud Engineer">
+<meta name="twitter:description" content="Senior DevOps, SRE, Platform, Cloud, AI/MLOps, Infrastructure and Systems Engineer based in Ontario, Canada. 20+ years building large-scale infrastructure.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -49,13 +61,14 @@ a:hover{text-decoration:underline}
 header{background:var(--surface);border-bottom:1px solid var(--border);padding:3rem 0 2rem}
 .container{max-width:760px;margin:0 auto;padding:0 1.5rem}
 .name{font-size:2rem;font-weight:500;letter-spacing:-0.5px;margin-bottom:0.25rem}
+.name::after{content:'';display:block;width:2rem;height:3px;background:var(--accent);margin-top:0.4rem;border-radius:2px}
 .title{font-size:1rem;color:var(--muted);margin-bottom:1rem}
 .meta{display:flex;gap:1.25rem;flex-wrap:wrap;font-size:0.875rem;color:var(--muted)}
 .meta a{color:var(--muted)}
 .meta a:hover{color:var(--accent)}
 .dot{color:var(--border)}
 
-.bio{padding:2rem 0;border-bottom:1px solid var(--border)}
+.bio{padding:2rem 0 2rem 1.25rem;border-bottom:1px solid var(--border);border-left:3px solid var(--accent)}
 .bio p{color:var(--muted);max-width:600px;line-height:1.7}
 .bio strong{color:var(--text)}
 
@@ -63,7 +76,8 @@ section{padding:2.5rem 0;border-bottom:1px solid var(--border)}
 section:last-child{border-bottom:none}
 .section-label{font-size:0.75rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:1.5rem}
 
-.project{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.project{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--border);transition:box-shadow 0.15s}
+.project:hover{box-shadow:inset 3px 0 0 var(--accent)}
 .project:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
 .project-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:0.5rem;flex-wrap:wrap}
 .project-name{font-size:1rem;font-weight:500}
@@ -72,6 +86,8 @@ section:last-child{border-bottom:none}
 .badge{font-size:0.7rem;padding:2px 8px;border-radius:99px;font-weight:500;white-space:nowrap}
 .badge-live{background:var(--accent-light);color:#085041}
 .badge-dev{background:#faeeda;color:#633806}
+[data-theme="dark"] .badge-dev{background:#2d1a00;color:#f0b860}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="dark"]) .badge-dev{background:#2d1a00;color:#f0b860}}
 .badge-internal{background:#f0f0eb;color:#555}
 .project-desc{font-size:0.9rem;color:var(--muted);margin-bottom:0.75rem;line-height:1.65}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -101,6 +117,7 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 .resume-btn:hover {
   opacity: 0.9;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(29,158,117,0.35);
 }
 
 .theme-toggle{position:fixed;top:1rem;right:1.5rem;display:flex;gap:2px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:3px;z-index:100}
@@ -114,6 +131,21 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
   .stack-grid{grid-template-columns:1fr}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Rahman Sherazi",
+  "url": "https://rehmansherazi.github.io",
+  "email": "rehmansherazi@gmail.com",
+  "jobTitle": "Senior DevOps / SRE / Platform / Cloud / AI/MLOps Engineer",
+  "address": {"@type": "PostalAddress", "addressRegion": "Ontario", "addressCountry": "CA"},
+  "sameAs": [
+    "https://linkedin.com/in/rahman-s-40b23a13",
+    "https://github.com/rehmansherazi"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -130,9 +162,9 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
   <div class="meta">
     <span>Ontario, Canada</span>
     <span class="dot">·</span>
-    <a href="https://linkedin.com/in/rahman-s-40b23a13" target="_blank">LinkedIn</a>
+    <a href="https://linkedin.com/in/rahman-s-40b23a13" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     <span class="dot">·</span>
-    <a href="https://github.com/rehmansherazi" target="_blank">GitHub</a>
+    <a href="https://github.com/rehmansherazi" target="_blank" rel="noopener noreferrer">GitHub</a>
     <span class="dot">·</span>
     <a href="mailto:rehmansherazi@gmail.com">rehmansherazi@gmail.com</a>
   </div>
@@ -170,7 +202,7 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 
   <div class="project">
     <div class="project-header">
-      <div class="project-name"><a href="https://github.com/rehmansherazi/jobmatch" target="_blank">JobMatch</a></div>
+      <div class="project-name"><a href="https://github.com/rehmansherazi/jobmatch" target="_blank" rel="noopener noreferrer">JobMatch</a></div>
       <span class="badge badge-dev">In development</span>
     </div>
     <div class="project-desc">AI-powered job discovery and resume tailoring pipeline. Fetches jobs from Adzuna and direct job boards, scores them against your resume using local TF-IDF and domain overlap scoring, and generates ATS-tailored resumes via Claude API. Self-hostable with a FastAPI dashboard, Docker packaging, user accounts, and run quota management.</div>
