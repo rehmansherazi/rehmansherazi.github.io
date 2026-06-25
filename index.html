@@ -81,8 +81,10 @@ section:last-child{border-bottom:none}
 .stack-group-label{font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.04em}
 .stack-items{font-size:0.85rem;color:var(--muted);line-height:1.75;list-style:disc inside;padding-left:0.25rem;margin:0}
 
-.cert-list{display:flex;flex-wrap:wrap;gap:8px}
-.cert{font-size:0.8rem;padding:4px 12px;border-radius:4px;border:1px solid var(--border);color:var(--muted);background:var(--surface)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.25rem}
+.cert-group-label{font-size:0.8rem;font-weight:600;color:var(--text);margin-bottom:0.35rem;text-transform:uppercase;letter-spacing:0.04em}
+.cert-items{font-size:0.85rem;color:var(--muted);line-height:1.75;list-style:disc inside;padding-left:0.25rem;margin:0}
+@media(max-width:600px){.cert-grid{grid-template-columns:1fr}}
 
 footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 .resume-btn {
@@ -352,16 +354,46 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 
 <section>
   <div class="section-label">Certifications</div>
-  <div class="cert-list">
-    <span class="cert">CKA — Certified Kubernetes Administrator</span>
-    <span class="cert">AWS DevOps Engineer Professional</span>
-    <span class="cert">AWS Solutions Architect Associate</span>
-    <span class="cert">VMware VCP</span>
-    <span class="cert">GitHub Copilot</span>
-    <span class="cert">MCSE / MCITP</span>
-    <span class="cert">MCP Azure</span>
-    <span class="cert">CompTIA Network+</span>
-    <span class="cert">CompTIA A+</span>
+  <div class="cert-grid">
+    <div>
+      <div class="cert-group-label">Kubernetes</div>
+      <ul class="cert-items">
+        <li>CKA — Certified Kubernetes Administrator</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cert-group-label">AWS</div>
+      <ul class="cert-items">
+        <li>DevOps Engineer Professional</li>
+        <li>Solutions Architect Associate</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cert-group-label">Microsoft</div>
+      <ul class="cert-items">
+        <li>MCSE / MCITP</li>
+        <li>MCP Azure</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cert-group-label">VMware</div>
+      <ul class="cert-items">
+        <li>VCP</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cert-group-label">CompTIA</div>
+      <ul class="cert-items">
+        <li>Network+</li>
+        <li>A+</li>
+      </ul>
+    </div>
+    <div>
+      <div class="cert-group-label">Other</div>
+      <ul class="cert-items">
+        <li>GitHub Copilot</li>
+      </ul>
+    </div>
   </div>
 </section>
 
