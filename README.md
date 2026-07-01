@@ -1,11 +1,11 @@
 # Rahman Sherazi
 
 **Senior DevOps · SRE · Platform · Cloud · Infrastructure · Systems · AI Engineer**
-Ontario, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehmansherazi@gmail.com
+Kitchener, ON, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehmansherazi@gmail.com
 
 ---
 
-20+ years building and operating large-scale infrastructure across cloud, on-premise, and hybrid environments. Currently at **DigitalOcean** as Cloud Operations Engineer II. I build tools that eliminate toil, reduce cost, and give engineering teams back their time.
+20+ years building, designing, and operating mission-critical infrastructure, platforms, and distributed systems. Currently at **DigitalOcean** engineering the systems that scale the cloud. I blend platform architecture with site reliability, treating operational engineering as a software discipline—building custom developer tooling, fail-safe automation frameworks, and intelligent CLI utilities that eliminate system toil, optimize architecture, and give engineering teams back their time.
 
 ---
 
