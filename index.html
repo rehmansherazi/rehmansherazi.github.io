@@ -187,6 +187,22 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 
   <div class="project">
     <div class="project-header">
+      <div class="project-name">cloudy — CloudOps Infrastructure CLI</div>
+      <span class="badge badge-internal">Internal</span>
+    </div>
+    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor administration, spare-capacity discovery, and VM event diagnostics — from a single, consistent interface. The core design principle: the safe path should also be the fast path. Read-only diagnostics run freely; anything that changes state on production hardware is gated behind an explicit peer-review confirmation step. A crash-recoverable power-cycle workflow detects interrupted runs and safely restores hardware, and an automated spare-capacity finder chains inventory search with live verification — explicitly flagging anything it can't confirm rather than guessing. Credentials are resolved from a password manager only at the moment they're needed and never persisted. Terminal output adapts automatically to light or dark themes.</div>
+    <div class="tags">
+      <span class="tag">Bash</span>
+      <span class="tag">CLI/Systems Design</span>
+      <span class="tag">GraphQL/REST</span>
+      <span class="tag">SSH Automation</span>
+      <span class="tag">Infrastructure Safety Engineering</span>
+      <span class="tag">Cross-Platform</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
       <div class="project-name">NearVar — Incident Runbook &amp; Environment Panel</div>
       <span class="badge badge-dev">In development</span>
     </div>
