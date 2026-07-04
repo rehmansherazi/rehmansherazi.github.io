@@ -90,6 +90,10 @@ section:last-child{border-bottom:none}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]):not([data-theme="dark"]) .badge-dev{background:#2d1a00;color:#f0b860}}
 .badge-internal{background:#f0f0eb;color:#555}
 .project-desc{font-size:0.9rem;color:var(--muted);margin-bottom:0.75rem;line-height:1.65}
+.project-desc ul{margin-top:0.5rem;padding-left:1.1rem;list-style:disc}
+.project-desc li{margin-bottom:0.2rem}
+.current-role{font-size:0.85rem;color:var(--muted);margin-top:0.3rem}
+.current-role strong{color:var(--text)}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{font-size:0.72rem;padding:3px 10px;border-radius:4px;background:var(--tag-bg);color:var(--tag-text)}
 
@@ -159,6 +163,7 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
 <div class="container">
   <div class="name">Rahman Sherazi</div>
   <div class="title">Senior DevOps · SRE · Platform · Cloud · AI/MLOps · Infrastructure · Systems Engineer</div>
+  <div class="current-role">Currently at <strong>DigitalOcean</strong> — Cloud Operations Engineer II</div>
   <div class="meta">
     <span>Kitchener, ON, Canada</span>
     <span class="dot">·</span>
@@ -190,7 +195,14 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
       <div class="project-name">cloudy — CloudOps Infrastructure CLI</div>
       <span class="badge badge-internal">Internal</span>
     </div>
-    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor administration, spare-capacity discovery, and VM event diagnostics — from a single, consistent interface. The core design principle: the safe path should also be the fast path. Read-only diagnostics run freely; anything that changes state on production hardware is gated behind an explicit peer-review confirmation step. A crash-recoverable power-cycle workflow detects interrupted runs and safely restores hardware, and an automated spare-capacity finder chains inventory search with live verification — explicitly flagging anything it can't confirm rather than guessing. Credentials are resolved from a password manager only at the moment they're needed and never persisted. Terminal output adapts automatically to light or dark themes.</div>
+    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, and VM diagnostics — from a single interface, replacing fragmented dashboards and one-off scripts.
+      <ul>
+        <li>Safe path = fast path: read-only diagnostics run freely; state changes on production hardware require explicit peer-review confirmation</li>
+        <li>Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured</li>
+        <li>Spare-capacity finder chains inventory search with live verification, flagging unverifiable results rather than guessing</li>
+        <li>Credentials pulled from password manager on demand, never persisted; output adapts to light/dark terminal themes</li>
+      </ul>
+    </div>
     <div class="tags">
       <span class="tag">Bash</span>
       <span class="tag">CLI/Systems Design</span>
@@ -281,7 +293,13 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
       <div class="project-name">OAR Renewals — Service Catalog Operability Platform</div>
       <span class="badge badge-internal">Internal</span>
     </div>
-    <div class="project-desc">Automates Operational Availability Review compliance across 1,200+ microservices. Ingests a live service catalog, validates documentation links, checks for required operability metadata, and tracks health over time with monthly snapshots. Hourly batched ingestion with smart deduplication, per-service scoring, and a read-only Streamlit dashboard with multi-format exports.</div>
+    <div class="project-desc">Automates Operational Availability Review compliance across 1,200+ microservices at DigitalOcean — replacing a manual, error-prone process with a continuously running platform.
+      <ul>
+        <li>Ingests a live service catalog hourly, validates documentation links, and checks for required operability metadata (PagerDuty, Jira, ownership)</li>
+        <li>Per-service scoring with monthly health snapshots to track compliance trends over time</li>
+        <li>Read-only Streamlit dashboard with filtering, pagination, and multi-format exports</li>
+      </ul>
+    </div>
     <div class="tags">
       <span class="tag">Python</span>
       <span class="tag">PostgreSQL</span>
@@ -298,7 +316,12 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
       <div class="project-name">CO-Tooling-Bot — CloudOps Incident Response Platform</div>
       <span class="badge badge-internal">Internal</span>
     </div>
-    <div class="project-desc">Automates hypervisor incident response for a large-scale cloud infrastructure team. Consolidates 8–12 parallel SSH terminals and copy-paste workflows into a single CLI and web dashboard. YAML-driven playbooks, automated escalation ladder (SSH → serial console → IPMI → BMC → PDU), real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty.</div>
+    <div class="project-desc">Consolidates 8–12 parallel SSH terminals and copy-paste workflows into a single CLI and lightweight web dashboard for hypervisor incident response at DigitalOcean.
+      <ul>
+        <li>YAML-driven playbooks with automated escalation: SSH → serial console → IPMI → BMC → PDU</li>
+        <li>Real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty</li>
+      </ul>
+    </div>
     <div class="tags">
       <span class="tag">Python</span>
       <span class="tag">FastAPI</span>
