@@ -1,6 +1,7 @@
 # Rahman Sherazi
 
 **Senior DevOps · SRE · Platform · Cloud · Infrastructure · Systems · AI Engineer**
+Currently at **DigitalOcean** — Cloud Operations Engineer II
 Kitchener, ON, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) · rehmansherazi@gmail.com
 
 ---
@@ -11,15 +12,16 @@ Kitchener, ON, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) �
 
 ## Projects
 
-### [cloudy — CloudOps Infrastructure CLI]
-(GraphQL/REST API integration · SSH automation · DigitalOcean)
+### cloudy — CloudOps Infrastructure CLI *(internal)*
 
-A modular command-line tool built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor administration, spare-capacity discovery, and VM event diagnostics — from a single, consistent interface. Before this, day-to-day operations meant jumping between multiple internal dashboards, raw API calls, and one-off scripts; a single mistake could put live customer infrastructure at risk.
+A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, and VM diagnostics — from a single interface, replacing fragmented dashboards and one-off scripts.
 
-The core design principle is that the safe path should also be the fast path. Read-only diagnostics run freely, but anything that changes state on production hardware is gated behind an explicit peer-review confirmation step modeled on the team's real operational safety policy. A crash-recoverable power-cycle workflow detects an interrupted run and safely restores hardware instead of leaving it half-configured, and an automated spare-capacity finder chains inventory search with live verification to shortlist genuinely available replacement hardware — explicitly flagging anything it can't verify rather than guessing. Before automating VM-event cancellation, I read the team's actual incident-response documentation and deliberately scoped it to only the actions confirmed safe, excluding the ones with a documented history of causing outages.
+- Safe path = fast path: read-only diagnostics run freely; state changes on production hardware require explicit peer-review confirmation
+- Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured
+- Spare-capacity finder chains inventory search with live verification, flagging unverifiable results rather than guessing
+- Credentials pulled from password manager on demand, never persisted; output adapts to light/dark terminal themes
 
-Under the hood, the tool holds itself to a few consistent engineering standards: it never treats "no response" as a confirmed state (an unreachable server and a confirmed-empty one are always reported distinctly), it detects the user's exact OS/shell environment to give correct install guidance rather than a generic error, and it resolves API fields dynamically via live schema introspection instead of hardcoding them. Credentials are resolved from a password manager only at the moment they're needed and never persisted, and terminal output adapts automatically to light or dark themes.
-`Bash Scripting` `CLI/Systems Design` `API Integration (GraphQL/REST)` `SSH Automation` `Infrastructure Safety Engineering` `Cross-Platform Engineering`
+`Bash` `CLI/Systems Design` `GraphQL/REST` `SSH Automation` `Infrastructure Safety Engineering` `Cross-Platform`
 
 ---
 
@@ -51,15 +53,24 @@ Architectural component engineered to map, manage, and visualise complex DAG rel
 
 ---
 
-### OAR Renewals — Service Catalog Operability Platform
-Internal platform that automates Operational Availability Review compliance across 1,200+ microservices. Ingests a live service catalog, validates documentation links, checks for required operability metadata (PagerDuty, Jira, ownership), and tracks health over time with monthly snapshots. Features hourly batched ingestion, link health validation, per-service scoring, and a read-only Streamlit dashboard with filtering, pagination, and multi-format exports.
+### OAR Renewals — Service Catalog Operability Platform *(internal)*
+
+Automates Operational Availability Review compliance across 1,200+ microservices at DigitalOcean — replacing a manual, error-prone process with a continuously running platform.
+
+- Ingests a live service catalog hourly, validates documentation links, and checks for required operability metadata (PagerDuty, Jira, ownership)
+- Per-service scoring with monthly health snapshots to track compliance trends over time
+- Read-only Streamlit dashboard with filtering, pagination, and multi-format exports
 
 `Python` `PostgreSQL` `SQLAlchemy` `Streamlit` `Docker` `Kubernetes` `Vault`
 
 ---
 
-### CO-Tooling-Bot — CloudOps Incident Response Platform
-Internal tool that automates hypervisor incident response for a large-scale cloud infrastructure team. Consolidates what was previously 8–12 parallel SSH terminals and copy-paste-driven workflows into a single CLI (`co`) and a lightweight web dashboard. Supports YAML-driven playbooks, automated escalation (SSH → serial console → IPMI → BMC → PDU), and real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty.
+### CO-Tooling-Bot — CloudOps Incident Response Platform *(internal)*
+
+Consolidates 8–12 parallel SSH terminals and copy-paste workflows into a single CLI and lightweight web dashboard for hypervisor incident response at DigitalOcean.
+
+- YAML-driven playbooks with automated escalation: SSH → serial console → IPMI → BMC → PDU
+- Real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty
 
 `Python` `FastAPI` `Click` `asyncio` `HTML/JS` `Docker` `VPN-deployed`
 
