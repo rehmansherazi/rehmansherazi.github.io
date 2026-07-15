@@ -14,12 +14,13 @@ Kitchener, ON, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) �
 
 ### cloudy — CloudOps Infrastructure CLI *(internal)*
 
-A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, and VM diagnostics — from a single interface, replacing fragmented dashboards and one-off scripts.
+A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral StackStorm containers, and one-off scripts.
 
-- Safe path = fast path: read-only diagnostics run freely; state changes on production hardware require explicit peer-review confirmation
+- Safe path = fast path: read-only diagnostics run freely, state changes on production hardware require peer-review confirmation, and irreversible actions (permanently destroying droplets) require a second, distinct typed confirmation on top of that
+- Executes DigitalOcean's safety-verified StackStorm power workflow directly over its REST API instead of a docker/CLI session — with automatic, interactively-gated fallback and retry when a safety check blocks the run
 - Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured
-- Spare-capacity finder chains inventory search with live verification, flagging unverifiable results rather than guessing
-- Credentials pulled from password manager on demand, never persisted; output adapts to light/dark terminal themes
+- Spare-capacity finder chains inventory search with live placement verification, flagging unverifiable results rather than guessing
+- Credentials pulled from a password manager on demand, never persisted; guided menu mode surfaces the equivalent direct command after every action, teaching the CLI instead of hiding it
 
 `Bash` `CLI/Systems Design` `GraphQL/REST` `SSH Automation` `Infrastructure Safety Engineering` `Cross-Platform`
 
