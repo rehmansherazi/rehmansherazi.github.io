@@ -195,10 +195,10 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
       <div class="project-name">cloudy — CloudOps Infrastructure CLI</div>
       <span class="badge badge-internal">Internal</span>
     </div>
-    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral StackStorm containers, and one-off scripts.
+    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral automation containers, and one-off scripts.
       <ul>
         <li>Safe path = fast path: read-only diagnostics run freely, state changes on production hardware require peer-review confirmation, and irreversible actions (permanently destroying droplets) require a second, distinct typed confirmation on top of that</li>
-        <li>Executes DigitalOcean's safety-verified StackStorm power workflow directly over its REST API instead of a docker/CLI session — with automatic, interactively-gated fallback and retry when a safety check blocks the run</li>
+        <li>Executes safety-verified power workflows directly over a REST API instead of an ephemeral container session — with automatic, interactively-gated fallback and retry when a safety check blocks the run</li>
         <li>Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured</li>
         <li>Spare-capacity finder chains inventory search with live placement verification, flagging unverifiable results rather than guessing</li>
         <li>Credentials pulled from a password manager on demand, never persisted; guided menu mode surfaces the equivalent direct command after every action, teaching the CLI instead of hiding it</li>
@@ -320,7 +320,7 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
     <div class="project-desc">Consolidates 8–12 parallel SSH terminals and copy-paste workflows into a single CLI and lightweight web dashboard for hypervisor incident response at DigitalOcean.
       <ul>
         <li>YAML-driven playbooks with automated escalation: SSH → serial console → IPMI → BMC → PDU</li>
-        <li>Real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty</li>
+        <li>Real-time integration with Atlantis, StackStorm, Slack, and PagerDuty</li>
       </ul>
     </div>
     <div class="tags">

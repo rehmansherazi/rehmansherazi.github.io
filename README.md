@@ -14,10 +14,10 @@ Kitchener, ON, Canada · [LinkedIn](https://linkedin.com/in/rahman-s-40b23a13) �
 
 ### cloudy — CloudOps Infrastructure CLI *(internal)*
 
-A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral StackStorm containers, and one-off scripts.
+A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral automation containers, and one-off scripts.
 
 - Safe path = fast path: read-only diagnostics run freely, state changes on production hardware require peer-review confirmation, and irreversible actions (permanently destroying droplets) require a second, distinct typed confirmation on top of that
-- Executes DigitalOcean's safety-verified StackStorm power workflow directly over its REST API instead of a docker/CLI session — with automatic, interactively-gated fallback and retry when a safety check blocks the run
+- Executes safety-verified power workflows directly over a REST API instead of an ephemeral container session — with automatic, interactively-gated fallback and retry when a safety check blocks the run
 - Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured
 - Spare-capacity finder chains inventory search with live placement verification, flagging unverifiable results rather than guessing
 - Credentials pulled from a password manager on demand, never persisted; guided menu mode surfaces the equivalent direct command after every action, teaching the CLI instead of hiding it
@@ -82,7 +82,7 @@ Automates Operational Availability Review compliance across 1,200+ microservices
 Consolidates 8–12 parallel SSH terminals and copy-paste workflows into a single CLI and lightweight web dashboard for hypervisor incident response at DigitalOcean.
 
 - YAML-driven playbooks with automated escalation: SSH → serial console → IPMI → BMC → PDU
-- Real-time integration with Atlantis, Shipyard, StackStorm, Slack, and PagerDuty
+- Real-time integration with Atlantis, StackStorm, Slack, and PagerDuty
 
 `Python` `FastAPI` `Click` `asyncio` `HTML/JS` `Docker` `VPN-deployed`
 
