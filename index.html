@@ -195,12 +195,13 @@ footer{padding:2rem 0;text-align:center;font-size:0.8rem;color:var(--muted)}
       <div class="project-name">cloudy — CloudOps Infrastructure CLI</div>
       <span class="badge badge-internal">Internal</span>
     </div>
-    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, and VM diagnostics — from a single interface, replacing fragmented dashboards and one-off scripts.
+    <div class="project-desc">A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal server operations — power control, hypervisor admin, spare-capacity discovery, VM/event diagnostics, alert-response automation, and full droplet lifecycle management up to permanent destruction — from a single interface, replacing fragmented dashboards, ephemeral StackStorm containers, and one-off scripts.
       <ul>
-        <li>Safe path = fast path: read-only diagnostics run freely; state changes on production hardware require explicit peer-review confirmation</li>
+        <li>Safe path = fast path: read-only diagnostics run freely, state changes on production hardware require peer-review confirmation, and irreversible actions (permanently destroying droplets) require a second, distinct typed confirmation on top of that</li>
+        <li>Executes DigitalOcean's safety-verified StackStorm power workflow directly over its REST API instead of a docker/CLI session — with automatic, interactively-gated fallback and retry when a safety check blocks the run</li>
         <li>Crash-recoverable power-cycle detects interrupted runs and restores hardware rather than leaving it half-configured</li>
-        <li>Spare-capacity finder chains inventory search with live verification, flagging unverifiable results rather than guessing</li>
-        <li>Credentials pulled from password manager on demand, never persisted; output adapts to light/dark terminal themes</li>
+        <li>Spare-capacity finder chains inventory search with live placement verification, flagging unverifiable results rather than guessing</li>
+        <li>Credentials pulled from a password manager on demand, never persisted; guided menu mode surfaces the equivalent direct command after every action, teaching the CLI instead of hiding it</li>
       </ul>
     </div>
     <div class="tags">
