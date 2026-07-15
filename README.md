@@ -25,6 +25,17 @@ A modular CLI built for DigitalOcean's CloudOps team to safely manage bare-metal
 
 ---
 
+### [NearVar — Incident Runbook & Environment Panel](https://marketplace.visualstudio.com/items?itemName=rehmansherazi.nearvar)
+
+A persistent VS Code sidebar utility consolidating local shell environments, AWS profiles, and markdown playbooks into a single dashboard — built to eliminate human-error risks during critical on-call outages. Available on the VS Code Marketplace.
+
+- Fail-safe terminal stream layer pastes scripts without automatic execution, preventing accidental production commands
+- Unified sidebar panel for environment switching, runbook access, and shell profiles without leaving the editor
+
+`TypeScript` `VS Code Extension API` `Shell` `AWS` `Markdown`
+
+---
+
 ### [JobMatch](https://github.com/rehmansherazi/jobmatch) *(in development)*
 AI-powered job discovery and resume tailoring pipeline. Fetches jobs from Adzuna and direct job boards, scores them against your resume using local TF-IDF and domain overlap scoring, and generates ATS-tailored resumes via Claude API. Fully self-hostable with a FastAPI dashboard, Docker packaging, user accounts, and run quota management.
 
